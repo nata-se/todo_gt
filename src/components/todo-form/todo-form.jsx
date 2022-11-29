@@ -16,7 +16,7 @@ export const TodoForm = () => {
     // Fin an ability to add new task
     const id = idGenerator()
     console.log(id)
-    setTodos([ ...todos, {id: {id},label: task, checked: false}])
+    setTodos([ ...todos, {id: id,label: task, checked: false}])
     setTask('')
   };
 
