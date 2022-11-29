@@ -7,10 +7,16 @@ export const TodoForm = () => {
   const { todos, setTodos } = React.useContext(TodosContext);
   const [task, setTask] = React.useState('');
 
+  // id generator, i couldn't use uuid
+  const idGenerator = () => {
+    return Date.now()
+  }
+
   const handleAddTodo = () => {
     // Fin an ability to add new task
-    // const id = uuidv4()
-    setTodos([ ...todos, {id: 4,label: {task}, checked: false,}])
+    const id = idGenerator()
+    console.log(id)
+    setTodos([ ...todos, {id: {id},label: task, checked: false}])
     setTask('')
   };
 
