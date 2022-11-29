@@ -1,13 +1,11 @@
 import * as React from "react"
 import { TodosContext } from "../../todo-context"
 import "./todo-form.scss"
-// import { v4 as uuidv4 } from 'uuid';
 
 export const TodoForm = () => {
   const { todos, setTodos } = React.useContext(TodosContext)
   const [task, setTask] = React.useState("")
 
-  // id generator, i couldn't use uuid
   const idGenerator = () => {
     return Date.now()
   }
