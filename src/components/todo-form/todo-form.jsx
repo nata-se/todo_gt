@@ -25,10 +25,12 @@ export const TodoForm = () => {
     }
   }
 
+  const buttonClass = task ? '' : 'disabled';
+
   return (
     <div className="todo-form">
       <input placeholder="Enter new task" value={task} onChange={(e) => setTask(e.target.value)} onKeyUp={handleKeyUp} />
-      <button type="button" onClick={handleAddTodo}>
+      <button type="button" onClick={handleAddTodo} className={buttonClass}>
         Add task
       </button>
     </div>
